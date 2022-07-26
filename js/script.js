@@ -20,6 +20,8 @@ var app = new Vue(
                 axios.get('http://localhost:8888/26-07-22/php-ajax-dischi/apiGenre.php')
                 .then((response) => {
                     this.genre = response.data;
+
+                    console.log(this.genre);
                 });
             }
         },
