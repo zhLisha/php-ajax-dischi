@@ -1,0 +1,76 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*************** 
+    Common 
+***************/
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #1e2d3b;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+.container {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+
+/* Header */
+header {
+    background-color: #2e3a46;
+    height: 50px;
+}
+header img {
+    width: 35px;
+}
+
+.head-wrapper {
+    align-items: center;
+    height: 100%;
+    padding-left: 20px;
+}
+
+
+/* Main */
+
+main ul {
+    flex-wrap: wrap;
+}
+
+.card {
+    margin: 10px;
+    width: calc((100% / 3) - 20px);
+    padding: 20px;
+    background-color: #2e3a46;
+    text-align: center;
+}
+
+.title-album {
+    color: white;
+    padding: 15px 0;
+}
+
+.other-album-detailes {
+    color: #545758;
+}
+
+
+
+

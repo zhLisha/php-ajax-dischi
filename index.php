@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +9,11 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <!-- Header -->
+    <?php include_once __DIR__ . '/partials/header.php'; ?>
+
+    <!-- Main -->
+    <?php include_once __DIR__ . '/partials/main.php'; ?>
+
 </body>
 </html>
