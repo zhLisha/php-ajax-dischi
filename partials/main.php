@@ -1,11 +1,13 @@
 <?php 
     // Imported Disk Array
-    include __DIR__ . '../../database.php';
+    require __DIR__ . '../../database.php';
+    include __DIR__ . '../../dataBaseGenre.php';
 ?>
 
 <main>
     <div class="container">
-        <ul class="flex" >
+
+        <ul class="flex" v-if="" >
             <?php foreach($disk as $music) { ?>
                 
                 <li class="card">

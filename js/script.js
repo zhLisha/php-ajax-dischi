@@ -2,7 +2,9 @@ var app = new Vue(
     {
         el: '#root',
         data: {
-            albums: []
+            albums: [],
+            genre: [],
+            selectedGenre: 'All Genre'
         },
 
         methods: {
@@ -11,11 +13,20 @@ var app = new Vue(
                 .then((response) => {
                     this.albums = response.data;
                 });
+
+            },
+
+            getGenreApi() {
+                axios.get('http://localhost:8888/26-07-22/php-ajax-dischi/apiGenre.php')
+                .then((response) => {
+                    this.genre = response.data;
+                });
             }
         },
 
         mounted() {
             this.getAlbumApi();
+            this.getGenreApi();
         }
     }
 )
