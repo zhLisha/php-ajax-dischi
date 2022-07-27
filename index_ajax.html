@@ -29,9 +29,13 @@
                 <!-- Select Genre Are -->
                 <form>
                     <label for="genre"></label>
-                    <select v-model="selectedGenre" name="genre" id="genre">
-                        <option value="All Genre">All Genre</option>
-                        <option v-for="(genres) in genre" value="genres">{{genres}}</option>
+                    <select v-model="selectedGenre" name="genre" id="genre" @change="getAlbumApi()">
+                        <option value="All">All</option>
+                        <!-- <option v-for="(genres) in genre" :value="genres">{{genres}}</option> -->
+                        <option value="Rock">Rock</option>
+                        <option value="Pop">Pop</option>
+                        <option value="Jazz">Jazz</option>
+                        <option value="Metal">Metal</option>
                     </select>
                 </form>
 

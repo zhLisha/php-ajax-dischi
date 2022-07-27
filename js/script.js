@@ -4,25 +4,22 @@ var app = new Vue(
         data: {
             albums: [],
             genre: [],
-            selectedGenre: 'All Genre'
+            selectedGenre: 'All'
         },
 
         methods: {
            getAlbumApi() {
-                axios.get('http://localhost:8888/26-07-22/php-ajax-dischi/apiDisk.php')
+                axios.get('http://localhost:8888/26-07-22/php-ajax-dischi/apiDisk.php',
+                    {
+                        params: {
+                            genre: this.selectedGenre
+                        }
+                    }
+                )
                 .then((response) => {
                     this.albums = response.data;
                 });
 
-            },
-
-            getGenreApi() {
-                axios.get('http://localhost:8888/26-07-22/php-ajax-dischi/apiGenre.php')
-                .then((response) => {
-                    this.genre = response.data;
-
-                    console.log(this.genre);
-                });
             }
         },
 
